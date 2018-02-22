@@ -9,7 +9,7 @@ plt.plot(months, hyrule)
 plt.plot(months, kakariko)
 plt.plot(months, gerudo)
 
-legend_labels=['Hyrule', 'Kakariko', 'Gerudo Valley']
+legend_labels = ['Hyrule', 'Kakariko', 'Gerudo Valley']
 plt.legend(legend_labels, loc=9)
 
 plt.show()
