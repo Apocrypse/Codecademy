@@ -1,19 +1,25 @@
 from matplotlib import pyplot as plt
 
-month_names = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep","Oct", "Nov", "Dec"]
+unit_topics = ['Limits', 'Derivatives', 'Integrals', 'Diff Eq', 'Applications']
+middle_school_a = [80, 85, 84, 83, 86]
+middle_school_b = [73, 78, 77, 82, 86]
 
-months = range(12)
-conversion = [0.05, 0.08, 0.18, 0.28, 0.4, 0.66, 0.74, 0.78, 0.8, 0.81, 0.85, 0.85]
+def create_x(t, w, n, d):
+    return [t*x + w*n for x in range(len(d))]
+school_a_x = create_x(2, 0.8, 1, middle_school_a)
+school_b_x = create_x(2, 0.8, 2, middle_school_b)
+school_x_zip = zip(school_a_x, school_b_x)
+middle_x = [(a + b) / 2 for a, b in school_x_zip]
 
-plt.xlabel("Months")
-plt.ylabel("Conversion")
-
-plt.plot(months, conversion)
-
+plt.figure(figsize=(10, 8))
 ax = plt.subplot()
-ax.set_xticks(months)
-ax.set_xticklabels(month_names)
-ax.set_yticks([0.10, 0.25, 0.5, 0.75])
-ax.set_yticklabels(['10%', '25%', '50%', '75%'])
+plt.bar(school_a_x, middle_school_a)
+plt.bar(school_b_x, middle_school_b)
+ax.set_xticks(middle_x)
+ax.set_xticklabels(unit_topics)
+plt.legend(['Middle School A', 'Middle School B'])
+plt.title('Test Averages on Different Units')
+plt.xlabel('Unit')
+plt.ylabel('Test Average')
 
 plt.show()
