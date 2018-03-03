@@ -10,4 +10,4 @@ shoe_counts_pivot = shoe_counts.pivot(
                     index = 'shoe_type',
                     values = 'id').reset_index()
 
-print shoe_counts_pivot
+print(shoe_counts_pivot)

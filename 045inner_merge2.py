@@ -10,4 +10,4 @@ all_data = sales.merge(targets)\
 	.merge(men_women)
 
 results = all_data[(all_data.revenue > all_data.target) & (all_data.women > all_data.men)]
-print results
+print(results)

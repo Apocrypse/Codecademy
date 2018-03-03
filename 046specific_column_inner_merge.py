@@ -11,4 +11,4 @@ orders_products = pd.merge(
                   right_on='id',
                   suffixes=['_orders', '_products']
 )
-print orders_products
+print(orders_products)
