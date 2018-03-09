@@ -11,4 +11,4 @@ df = pd.DataFrame([
 
 df['Is taxed?'] = 'Yes'
 
-print df
+print(df)

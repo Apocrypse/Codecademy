@@ -11,4 +11,4 @@ df = pd.DataFrame([
 
 df['Revenue'] = df['Price'] - df['Cost to Manufacture']
 
-print df
+print(df)

@@ -11,4 +11,4 @@ df = pd.DataFrame([
 
 df['Sold in Bulk?'] = ['Yes', 'Yes', 'No', 'No']
 
-print df
+print(df)

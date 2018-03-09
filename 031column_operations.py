@@ -10,4 +10,4 @@ columns=['Name', 'Email'])
 
 df['Lowercase Name'] = df.Name.apply(lower)
 
-print df
+print(df)
