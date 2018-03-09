@@ -8,4 +8,4 @@ df2 = pd.DataFrame([
   ],
   columns=['Store ID', 'Location', 'Number of Employees'])
 
-print df2
+print(df2)

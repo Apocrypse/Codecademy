@@ -6,4 +6,4 @@ df1 = pd.DataFrame({
   'Color': ['blue', 'green', 'red', 'black']
 })
 
-print df1
+print(df1)
