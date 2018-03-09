@@ -6,4 +6,4 @@ df.rename(columns={
   'name': 'movie_title'},
   inplace = True)
 
-print df
+print(df)
