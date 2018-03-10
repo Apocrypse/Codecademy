@@ -18,4 +18,4 @@ combine = lambda row: \
                      row.product_description)
 inventory['full_description'] = inventory.apply(combine, axis=1)
 
-print inventory.head(10)
+print(inventory.head(10))
