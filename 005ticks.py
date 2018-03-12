@@ -6,6 +6,7 @@ middle_school_b = [73, 78, 77, 82, 86]
 
 def create_x(t, w, n, d):
     return [t*x + w*n for x in range(len(d))]
+
 school_a_x = create_x(2, 0.8, 1, middle_school_a)
 school_b_x = create_x(2, 0.8, 2, middle_school_b)
 school_x_zip = zip(school_a_x, school_b_x)

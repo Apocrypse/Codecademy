@@ -13,9 +13,8 @@ inventory['in_stock'] = inventory.quantity.apply(stock)
 value = lambda row: row.price * row.quantity
 inventory['total_value'] = inventory.apply(value, axis=1)
 
-combine = lambda row: \
-    '{} - {}'.format(row.product_type,
-                     row.product_description)
+combine = lambda row: '{} - {}'.format(row.product_type,
+                      row.product_description)
 inventory['full_description'] = inventory.apply(combine, axis=1)
 
 print(inventory.head(10))
