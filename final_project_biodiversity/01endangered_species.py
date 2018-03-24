@@ -59,7 +59,7 @@ category_pivot.columns = ['category', 'not_protected', 'protected']
 # print(category_pivot)
 
 category_pivot['percent_protected'] = category_pivot.protected / (category_pivot.protected + category_pivot.not_protected)
-# print(category_pivot)
+print(category_pivot)
 
 from scipy.stats import chi2_contingency
 
@@ -68,9 +68,9 @@ contingency_bird_mammal = [[category_pivot.iat[3,2], category_pivot.iat[3,1]],
 
 
 pval_bird_mammal = chi2_contingency(contingency_bird_mammal)[1]
-print(pval_bird_mammal)
+print('{:.2f}%'.format(pval_bird_mammal*100))
 
 contingency_reptile_mammal = [[category_pivot.iat[3,2], category_pivot.iat[3,1]],
                               [category_pivot.iat[5,2], category_pivot.iat[5,1]]]
 pval_reptile_mammal = chi2_contingency(contingency_reptile_mammal)[1]
-print(pval_reptile_mammal)
+print('{:.2f}%'.format(pval_reptile_mammal*100))
